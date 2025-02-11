@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Venkata Rajesh, Gnaneshwar Reddy, Sathwik Reddy, Mahesh Patel">
+
+<title>Entity-Relationship Diagrams</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="report_files/libs/quarto-html/quarto.js"></script>
+<script src="report_files/libs/quarto-html/popper.min.js"></script>
+<script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="report_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="report_files/libs/bootstrap/bootstrap-8a79a254b8e706d3c925cde0a310d4f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="report_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="report_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="report_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Entity-Relationship Diagrams</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Venkata Rajesh, Gnaneshwar Reddy, Sathwik Reddy, Mahesh Patel </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="library-management-system" class="level1">
+<h1>1. Library Management System</h1>
+<section id="chen-notation-graphviz" class="level2">
+<h2 class="anchored" data-anchor-id="chen-notation-graphviz">Chen Notation (Graphviz)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 859.38 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>LibraryManagement</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 855.38,-256 855.38,4 -4,4"></polygon>
+<!-- Book -->
+<g id="node1" class="node">
+<title>Book</title>
+<polygon fill="lightblue" stroke="black" points="434.06,-108 380.06,-108 380.06,-72 434.06,-72 434.06,-108"></polygon>
+<text text-anchor="middle" x="407.06" y="-85.8" font-family="Times,serif" font-size="14.00">Book</text>
+</g>
+<!-- bookID -->
+<g id="node4" class="node">
+<title>bookID</title>
+<ellipse fill="lightyellow" stroke="black" cx="259.06" cy="-18" rx="61.96" ry="18"></ellipse>
+<text text-anchor="middle" x="259.06" y="-13.8" font-family="Times,serif" font-size="14.00">bookID (PK)</text>
+</g>
+<!-- Book&#45;&gt;bookID -->
+<g id="edge1" class="edge">
+<title>Book-&gt;bookID</title>
+<path fill="none" stroke="black" d="M379.91,-76.16C357.32,-65.47 324.82,-50.11 299.22,-38"></path>
+<polygon fill="black" stroke="black" points="300.66,-34.81 290.13,-33.7 297.67,-41.14 300.66,-34.81"></polygon>
+</g>
+<!-- title -->
+<g id="node5" class="node">
+<title>title</title>
+<ellipse fill="lightyellow" stroke="black" cx="366.06" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="366.06" y="-13.8" font-family="Times,serif" font-size="14.00">title</text>
+</g>
+<!-- Book&#45;&gt;title -->
+<g id="edge2" class="edge">
+<title>Book-&gt;title</title>
+<path fill="none" stroke="black" d="M396.92,-71.7C392.01,-63.32 386.03,-53.1 380.64,-43.9"></path>
+<polygon fill="black" stroke="black" points="383.59,-42 375.51,-35.14 377.55,-45.54 383.59,-42"></polygon>
+</g>
+<!-- author -->
+<g id="node6" class="node">
+<title>author</title>
+<ellipse fill="lightyellow" stroke="black" cx="447.06" cy="-18" rx="35.92" ry="18"></ellipse>
+<text text-anchor="middle" x="447.06" y="-13.8" font-family="Times,serif" font-size="14.00">author</text>
+</g>
+<!-- Book&#45;&gt;author -->
+<g id="edge3" class="edge">
+<title>Book-&gt;author</title>
+<path fill="none" stroke="black" d="M416.94,-71.7C421.61,-63.52 427.28,-53.6 432.44,-44.58"></path>
+<polygon fill="black" stroke="black" points="435.64,-46.04 437.56,-35.62 429.56,-42.57 435.64,-46.04"></polygon>
+</g>
+<!-- Member -->
+<g id="node2" class="node">
+<title>Member</title>
+<polygon fill="lightblue" stroke="black" points="292.99,-252 229.13,-252 229.13,-216 292.99,-216 292.99,-252"></polygon>
+<text text-anchor="middle" x="261.06" y="-229.8" font-family="Times,serif" font-size="14.00">Member</text>
+</g>
+<!-- memberID -->
+<g id="node7" class="node">
+<title>memberID</title>
+<ellipse fill="lightyellow" stroke="black" cx="74.06" cy="-162" rx="74.11" ry="18"></ellipse>
+<text text-anchor="middle" x="74.06" y="-157.8" font-family="Times,serif" font-size="14.00">memberID (PK)</text>
+</g>
+<!-- Member&#45;&gt;memberID -->
+<g id="edge4" class="edge">
+<title>Member-&gt;memberID</title>
+<path fill="none" stroke="black" d="M229.33,-221.13C200.03,-210.16 156.07,-193.7 122.39,-181.09"></path>
+<polygon fill="black" stroke="black" points="123.34,-177.71 112.74,-177.48 120.88,-184.27 123.34,-177.71"></polygon>
+</g>
+<!-- name -->
+<g id="node8" class="node">
+<title>name</title>
+<ellipse fill="lightyellow" stroke="black" cx="198.06" cy="-162" rx="31.9" ry="18"></ellipse>
+<text text-anchor="middle" x="198.06" y="-157.8" font-family="Times,serif" font-size="14.00">name</text>
+</g>
+<!-- Member&#45;&gt;name -->
+<g id="edge5" class="edge">
+<title>Member-&gt;name</title>
+<path fill="none" stroke="black" d="M245.48,-215.7C237.51,-206.84 227.7,-195.93 219.06,-186.34"></path>
+<polygon fill="black" stroke="black" points="221.45,-183.76 212.16,-178.67 216.25,-188.45 221.45,-183.76"></polygon>
+</g>
+<!-- membershipDate -->
+<g id="node9" class="node">
+<title>membershipDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="325.06" cy="-162" rx="77.01" ry="18"></ellipse>
+<text text-anchor="middle" x="325.06" y="-157.8" font-family="Times,serif" font-size="14.00">membershipDate</text>
+</g>
+<!-- Member&#45;&gt;membershipDate -->
+<g id="edge6" class="edge">
+<title>Member-&gt;membershipDate</title>
+<path fill="none" stroke="black" d="M276.88,-215.7C284.63,-207.22 294.1,-196.86 302.58,-187.58"></path>
+<polygon fill="black" stroke="black" points="305.25,-189.85 309.42,-180.1 300.09,-185.12 305.25,-189.85"></polygon>
+</g>
+<!-- Borrows -->
+<g id="node13" class="node">
+<title>Borrows</title>
+<polygon fill="orange" stroke="black" points="483.06,-180 420.26,-162 483.06,-144 545.85,-162 483.06,-180"></polygon>
+<text text-anchor="middle" x="483.06" y="-157.8" font-family="Times,serif" font-size="14.00">Borrows</text>
+</g>
+<!-- Member&#45;&gt;Borrows -->
+<g id="edge10" class="edge">
+<title>Member-&gt;Borrows</title>
+<path fill="none" stroke="black" d="M292.86,-222.97C332.93,-210.34 401.73,-188.64 444.68,-175.1"></path>
+<polygon fill="black" stroke="black" points="445.99,-178.36 454.48,-172.01 443.89,-171.68 445.99,-178.36"></polygon>
+</g>
+<!-- Loan -->
+<g id="node3" class="node">
+<title>Loan</title>
+<polygon fill="lightgreen" stroke="black" points="648.06,-108 594.06,-108 594.06,-72 648.06,-72 648.06,-108"></polygon>
+<text text-anchor="middle" x="621.06" y="-85.8" font-family="Times,serif" font-size="14.00">Loan</text>
+</g>
+<!-- loanID -->
+<g id="node10" class="node">
+<title>loanID</title>
+<ellipse fill="lightyellow" stroke="black" cx="560.06" cy="-18" rx="59.09" ry="18"></ellipse>
+<text text-anchor="middle" x="560.06" y="-13.8" font-family="Times,serif" font-size="14.00">loanID (PK)</text>
+</g>
+<!-- Loan&#45;&gt;loanID -->
+<g id="edge7" class="edge">
+<title>Loan-&gt;loanID</title>
+<path fill="none" stroke="black" d="M605.98,-71.7C598.48,-63.09 589.3,-52.55 581.12,-43.17"></path>
+<polygon fill="black" stroke="black" points="583.75,-40.86 574.54,-35.62 578.47,-45.46 583.75,-40.86"></polygon>
+</g>
+<!-- loanDate -->
+<g id="node11" class="node">
+<title>loanDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="683.06" cy="-18" rx="45.78" ry="18"></ellipse>
+<text text-anchor="middle" x="683.06" y="-13.8" font-family="Times,serif" font-size="14.00">loanDate</text>
+</g>
+<!-- Loan&#45;&gt;loanDate -->
+<g id="edge8" class="edge">
+<title>Loan-&gt;loanDate</title>
+<path fill="none" stroke="black" d="M636.38,-71.7C644.11,-62.97 653.61,-52.24 662.02,-42.75"></path>
+<polygon fill="black" stroke="black" points="664.75,-44.95 668.76,-35.14 659.51,-40.31 664.75,-44.95"></polygon>
+</g>
+<!-- returnDate -->
+<g id="node12" class="node">
+<title>returnDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="799.06" cy="-18" rx="52.15" ry="18"></ellipse>
+<text text-anchor="middle" x="799.06" y="-13.8" font-family="Times,serif" font-size="14.00">returnDate</text>
+</g>
+<!-- Loan&#45;&gt;returnDate -->
+<g id="edge9" class="edge">
+<title>Loan-&gt;returnDate</title>
+<path fill="none" stroke="black" d="M648.09,-78.37C676.86,-67.06 722.78,-49 756.42,-35.77"></path>
+<polygon fill="black" stroke="black" points="757.98,-38.92 766,-32 755.41,-32.4 757.98,-38.92"></polygon>
+</g>
+<!-- Borrows&#45;&gt;Book -->
+<g id="edge11" class="edge">
+<title>Borrows-&gt;Book</title>
+<path fill="none" stroke="black" d="M468.76,-147.83C458.74,-138.61 445.07,-126.01 433.14,-115.02"></path>
+<polygon fill="black" stroke="black" points="435.33,-112.28 425.6,-108.08 430.59,-117.43 435.33,-112.28"></polygon>
+</g>
+<!-- Borrows&#45;&gt;Loan -->
+<g id="edge12" class="edge">
+<title>Borrows-&gt;Loan</title>
+<path fill="none" stroke="black" d="M504.62,-150.06C526.09,-139.17 559.43,-122.26 584.95,-109.32"></path>
+<polygon fill="black" stroke="black" points="586.62,-112.39 593.96,-104.75 583.46,-106.15 586.62,-112.39"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This diagram illustrates the relationships within a library system where members borrow books. Each loan captures transaction details, including borrowing and return dates.</p>
+</section>
+<section id="crows-foot-notation-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="crows-foot-notation-mermaid">Crow’s Foot Notation (Mermaid)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">erDiagram
+    BOOK {
+        int bookID PK
+        string title
+        string author
+    }
+    MEMBER {
+        int memberID PK
+        string name
+        date membershipDate
+    }
+    LOAN {
+        int loanID PK
+        date loanDate
+        date returnDate
+    }
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="entities-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="entities-attributes">Entities &amp; Attributes</h3>
+<ul>
+<li><em>Book</em> (BookID PK, Title, Author)</li>
+<li><em>Member</em> (MemberID PK, Name, MembershipDate)</li>
+<li><em>Loan</em> (LoanID PK, LoanDate, ReturnDate, MemberID FK, BookID FK)</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="school-course-enrollment-system" class="level1">
+<h1>2. School Course Enrollment System</h1>
+<section id="chen-notation-graphviz-1" class="level2">
+<h2 class="anchored" data-anchor-id="chen-notation-graphviz-1">Chen Notation (Graphviz)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 720.79 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>SchoolEnrollment</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 716.79,-256 716.79,4 -4,4"></polygon>
+<!-- Student -->
+<g id="node1" class="node">
+<title>Student</title>
+<polygon fill="lightblue" stroke="black" points="279.59,-252 221.03,-252 221.03,-216 279.59,-216 279.59,-252"></polygon>
+<text text-anchor="middle" x="250.31" y="-229.8" font-family="Times,serif" font-size="14.00">Student</text>
+</g>
+<!-- studentID -->
+<g id="node4" class="node">
+<title>studentID</title>
+<ellipse fill="lightyellow" stroke="black" cx="70.31" cy="-162" rx="70.13" ry="18"></ellipse>
+<text text-anchor="middle" x="70.31" y="-157.8" font-family="Times,serif" font-size="14.00">studentID (PK)</text>
+</g>
+<!-- Student&#45;&gt;studentID -->
+<g id="edge1" class="edge">
+<title>Student-&gt;studentID</title>
+<path fill="none" stroke="black" d="M220.99,-221.6C192.79,-210.63 149.72,-193.88 116.84,-181.09"></path>
+<polygon fill="black" stroke="black" points="118.01,-177.79 107.42,-177.43 115.47,-184.32 118.01,-177.79"></polygon>
+</g>
+<!-- studentName -->
+<g id="node5" class="node">
+<title>studentName</title>
+<ellipse fill="lightyellow" stroke="black" cx="190.31" cy="-162" rx="31.9" ry="18"></ellipse>
+<text text-anchor="middle" x="190.31" y="-157.8" font-family="Times,serif" font-size="14.00">name</text>
+</g>
+<!-- Student&#45;&gt;studentName -->
+<g id="edge2" class="edge">
+<title>Student-&gt;studentName</title>
+<path fill="none" stroke="black" d="M235.48,-215.7C227.89,-206.84 218.54,-195.93 210.32,-186.34"></path>
+<polygon fill="black" stroke="black" points="212.91,-183.99 203.75,-178.67 207.6,-188.54 212.91,-183.99"></polygon>
+</g>
+<!-- enrollmentDate -->
+<g id="node6" class="node">
+<title>enrollmentDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="311.31" cy="-162" rx="71.2" ry="18"></ellipse>
+<text text-anchor="middle" x="311.31" y="-157.8" font-family="Times,serif" font-size="14.00">enrollmentDate</text>
+</g>
+<!-- Student&#45;&gt;enrollmentDate -->
+<g id="edge3" class="edge">
+<title>Student-&gt;enrollmentDate</title>
+<path fill="none" stroke="black" d="M265.39,-215.7C272.7,-207.3 281.62,-197.07 289.65,-187.86"></path>
+<polygon fill="black" stroke="black" points="292.48,-189.94 296.41,-180.1 287.2,-185.34 292.48,-189.94"></polygon>
+</g>
+<!-- Enrolls -->
+<g id="node12" class="node">
+<title>Enrolls</title>
+<polygon fill="orange" stroke="black" points="455.31,-180 400.2,-162 455.31,-144 510.43,-162 455.31,-180"></polygon>
+<text text-anchor="middle" x="455.31" y="-157.8" font-family="Times,serif" font-size="14.00">Enrolls</text>
+</g>
+<!-- Student&#45;&gt;Enrolls -->
+<g id="edge9" class="edge">
+<title>Student-&gt;Enrolls</title>
+<path fill="none" stroke="black" d="M279.68,-222.97C316.73,-210.32 380.38,-188.59 420.03,-175.05"></path>
+<polygon fill="black" stroke="black" points="421.23,-178.34 429.56,-171.79 418.96,-171.71 421.23,-178.34"></polygon>
+</g>
+<!-- Course -->
+<g id="node2" class="node">
+<title>Course</title>
+<polygon fill="lightblue" stroke="black" points="392.98,-108 337.65,-108 337.65,-72 392.98,-72 392.98,-108"></polygon>
+<text text-anchor="middle" x="365.31" y="-85.8" font-family="Times,serif" font-size="14.00">Course</text>
+</g>
+<!-- courseID -->
+<g id="node7" class="node">
+<title>courseID</title>
+<ellipse fill="lightyellow" stroke="black" cx="211.31" cy="-18" rx="67.74" ry="18"></ellipse>
+<text text-anchor="middle" x="211.31" y="-13.8" font-family="Times,serif" font-size="14.00">courseID (PK)</text>
+</g>
+<!-- Course&#45;&gt;courseID -->
+<g id="edge4" class="edge">
+<title>Course-&gt;courseID</title>
+<path fill="none" stroke="black" d="M337.42,-76.32C313.93,-65.64 279.97,-50.21 253.21,-38.04"></path>
+<polygon fill="black" stroke="black" points="254.62,-34.84 244.07,-33.89 251.73,-41.21 254.62,-34.84"></polygon>
+</g>
+<!-- title -->
+<g id="node8" class="node">
+<title>title</title>
+<ellipse fill="lightyellow" stroke="black" cx="324.31" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="324.31" y="-13.8" font-family="Times,serif" font-size="14.00">title</text>
+</g>
+<!-- Course&#45;&gt;title -->
+<g id="edge5" class="edge">
+<title>Course-&gt;title</title>
+<path fill="none" stroke="black" d="M355.18,-71.7C350.27,-63.32 344.28,-53.1 338.9,-43.9"></path>
+<polygon fill="black" stroke="black" points="341.84,-42 333.77,-35.14 335.8,-45.54 341.84,-42"></polygon>
+</g>
+<!-- credits -->
+<g id="node9" class="node">
+<title>credits</title>
+<ellipse fill="lightyellow" stroke="black" cx="406.31" cy="-18" rx="36.56" ry="18"></ellipse>
+<text text-anchor="middle" x="406.31" y="-13.8" font-family="Times,serif" font-size="14.00">credits</text>
+</g>
+<!-- Course&#45;&gt;credits -->
+<g id="edge6" class="edge">
+<title>Course-&gt;credits</title>
+<path fill="none" stroke="black" d="M375.45,-71.7C380.28,-63.44 386.17,-53.39 391.49,-44.3"></path>
+<polygon fill="black" stroke="black" points="394.54,-46.02 396.58,-35.62 388.5,-42.48 394.54,-46.02"></polygon>
+</g>
+<!-- Enrollment -->
+<g id="node3" class="node">
+<title>Enrollment</title>
+<polygon fill="lightgreen" stroke="black" points="584.8,-108 505.83,-108 505.83,-72 584.8,-72 584.8,-108"></polygon>
+<text text-anchor="middle" x="545.31" y="-85.8" font-family="Times,serif" font-size="14.00">Enrollment</text>
+</g>
+<!-- enrollmentID -->
+<g id="node10" class="node">
+<title>enrollmentID</title>
+<ellipse fill="lightyellow" stroke="black" cx="545.31" cy="-18" rx="84" ry="18"></ellipse>
+<text text-anchor="middle" x="545.31" y="-13.8" font-family="Times,serif" font-size="14.00">enrollmentID (PK)</text>
+</g>
+<!-- Enrollment&#45;&gt;enrollmentID -->
+<g id="edge7" class="edge">
+<title>Enrollment-&gt;enrollmentID</title>
+<path fill="none" stroke="black" d="M545.31,-71.7C545.31,-63.98 545.31,-54.71 545.31,-46.11"></path>
+<polygon fill="black" stroke="black" points="548.81,-46.1 545.31,-36.1 541.81,-46.1 548.81,-46.1"></polygon>
+</g>
+<!-- grade -->
+<g id="node11" class="node">
+<title>grade</title>
+<ellipse fill="lightyellow" stroke="black" cx="680.31" cy="-18" rx="32.46" ry="18"></ellipse>
+<text text-anchor="middle" x="680.31" y="-13.8" font-family="Times,serif" font-size="14.00">grade</text>
+</g>
+<!-- Enrollment&#45;&gt;grade -->
+<g id="edge8" class="edge">
+<title>Enrollment-&gt;grade</title>
+<path fill="none" stroke="black" d="M578.34,-71.88C599.69,-60.81 627.33,-46.47 648.45,-35.52"></path>
+<polygon fill="black" stroke="black" points="650.09,-38.62 657.35,-30.9 646.86,-32.4 650.09,-38.62"></polygon>
+</g>
+<!-- Enrolls&#45;&gt;Course -->
+<g id="edge10" class="edge">
+<title>Enrolls-&gt;Course</title>
+<path fill="none" stroke="black" d="M439.64,-148.81C427.4,-139.29 410.03,-125.78 395.17,-114.22"></path>
+<polygon fill="black" stroke="black" points="397.26,-111.41 387.21,-108.03 392.96,-116.94 397.26,-111.41"></polygon>
+</g>
+<!-- Enrolls&#45;&gt;Enrollment -->
+<g id="edge11" class="edge">
+<title>Enrolls-&gt;Enrollment</title>
+<path fill="none" stroke="black" d="M470.99,-148.81C483.23,-139.29 500.59,-125.78 515.46,-114.22"></path>
+<polygon fill="black" stroke="black" points="517.67,-116.94 523.41,-108.03 513.37,-111.41 517.67,-116.94"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This ER diagram models the structure of a school course enrollment system. Students enroll in courses, and each enrollment records details such as the enrollment date and status.</p>
+</section>
+<section id="crows-foot-notation-mermaid-1" class="level2">
+<h2 class="anchored" data-anchor-id="crows-foot-notation-mermaid-1">Crow’s Foot Notation (Mermaid)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">erDiagram
+    STUDENT {
+        int studentID PK
+        string name
+        date enrollmentDate
+    }
+    COURSE {
+        int courseID PK
+        string title
+        int credits
+    }
+    ENROLLMENT {
+        int enrollmentID PK
+        date enrollmentDate
+        string grade
+        int studentID FK
+        int courseID FK
+    }
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="relation-set-schema" class="level3">
+<h3 class="anchored" data-anchor-id="relation-set-schema">Relation Set Schema</h3>
+<ul>
+<li><em>Student</em> (StudentID PK, Name, EnrollmentDate)</li>
+<li><em>Course</em> (CourseID PK, Title, Credits)</li>
+<li><em>Enrollment</em> (EnrollmentID PK, EnrollmentDate, Grade, StudentID FK, CourseID FK)</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="hotel-booking-system" class="level1">
+<h1>3. Hotel Booking System</h1>
+<section id="chen-notation-graphviz-2" class="level2">
+<h2 class="anchored" data-anchor-id="chen-notation-graphviz-2">Chen Notation (Graphviz)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 853.07 260.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>HotelBooking</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-256 849.07,-256 849.07,4 -4,4"></polygon>
+<!-- Room -->
+<g id="node1" class="node">
+<title>Room</title>
+<polygon fill="lightblue" stroke="black" points="354.8,-108 300.8,-108 300.8,-72 354.8,-72 354.8,-108"></polygon>
+<text text-anchor="middle" x="327.8" y="-85.8" font-family="Times,serif" font-size="14.00">Room</text>
+</g>
+<!-- roomNumber -->
+<g id="node4" class="node">
+<title>roomNumber</title>
+<ellipse fill="lightyellow" stroke="black" cx="160.8" cy="-18" rx="84.01" ry="18"></ellipse>
+<text text-anchor="middle" x="160.8" y="-13.8" font-family="Times,serif" font-size="14.00">roomNumber (PK)</text>
+</g>
+<!-- Room&#45;&gt;roomNumber -->
+<g id="edge1" class="edge">
+<title>Room-&gt;roomNumber</title>
+<path fill="none" stroke="black" d="M300.6,-77.6C275.24,-66.97 236.93,-50.91 206.82,-38.29"></path>
+<polygon fill="black" stroke="black" points="207.94,-34.96 197.36,-34.32 205.23,-41.42 207.94,-34.96"></polygon>
+</g>
+<!-- roomType -->
+<g id="node5" class="node">
+<title>roomType</title>
+<ellipse fill="lightyellow" stroke="black" cx="290.8" cy="-18" rx="27.83" ry="18"></ellipse>
+<text text-anchor="middle" x="290.8" y="-13.8" font-family="Times,serif" font-size="14.00">type</text>
+</g>
+<!-- Room&#45;&gt;roomType -->
+<g id="edge2" class="edge">
+<title>Room-&gt;roomType</title>
+<path fill="none" stroke="black" d="M318.66,-71.7C314.27,-63.4 308.94,-53.31 304.11,-44.19"></path>
+<polygon fill="black" stroke="black" points="307.1,-42.35 299.33,-35.14 300.91,-45.62 307.1,-42.35"></polygon>
+</g>
+<!-- rate -->
+<g id="node6" class="node">
+<title>rate</title>
+<ellipse fill="lightyellow" stroke="black" cx="363.8" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="363.8" y="-13.8" font-family="Times,serif" font-size="14.00">rate</text>
+</g>
+<!-- Room&#45;&gt;rate -->
+<g id="edge3" class="edge">
+<title>Room-&gt;rate</title>
+<path fill="none" stroke="black" d="M336.7,-71.7C340.97,-63.4 346.16,-53.31 350.85,-44.19"></path>
+<polygon fill="black" stroke="black" points="354.04,-45.64 355.5,-35.14 347.81,-42.44 354.04,-45.64"></polygon>
+</g>
+<!-- Guest -->
+<g id="node2" class="node">
+<title>Guest</title>
+<polygon fill="lightblue" stroke="black" points="254.8,-252 200.8,-252 200.8,-216 254.8,-216 254.8,-252"></polygon>
+<text text-anchor="middle" x="227.8" y="-229.8" font-family="Times,serif" font-size="14.00">Guest</text>
+</g>
+<!-- guestID -->
+<g id="node7" class="node">
+<title>guestID</title>
+<ellipse fill="lightyellow" stroke="black" cx="62.8" cy="-162" rx="62.6" ry="18"></ellipse>
+<text text-anchor="middle" x="62.8" y="-157.8" font-family="Times,serif" font-size="14.00">guestID (PK)</text>
+</g>
+<!-- Guest&#45;&gt;guestID -->
+<g id="edge4" class="edge">
+<title>Guest-&gt;guestID</title>
+<path fill="none" stroke="black" d="M200.55,-221.44C174.79,-210.51 135.71,-193.93 105.74,-181.22"></path>
+<polygon fill="black" stroke="black" points="106.94,-177.92 96.37,-177.24 104.2,-184.37 106.94,-177.92"></polygon>
+</g>
+<!-- guestName -->
+<g id="node8" class="node">
+<title>guestName</title>
+<ellipse fill="lightyellow" stroke="black" cx="175.8" cy="-162" rx="31.9" ry="18"></ellipse>
+<text text-anchor="middle" x="175.8" y="-157.8" font-family="Times,serif" font-size="14.00">name</text>
+</g>
+<!-- Guest&#45;&gt;guestName -->
+<g id="edge5" class="edge">
+<title>Guest-&gt;guestName</title>
+<path fill="none" stroke="black" d="M214.95,-215.7C208.59,-207.14 200.81,-196.67 193.87,-187.33"></path>
+<polygon fill="black" stroke="black" points="196.57,-185.08 187.79,-179.14 190.95,-189.26 196.57,-185.08"></polygon>
+</g>
+<!-- contactInfo -->
+<g id="node9" class="node">
+<title>contactInfo</title>
+<ellipse fill="lightyellow" stroke="black" cx="280.8" cy="-162" rx="55.01" ry="18"></ellipse>
+<text text-anchor="middle" x="280.8" y="-157.8" font-family="Times,serif" font-size="14.00">contactInfo</text>
+</g>
+<!-- Guest&#45;&gt;contactInfo -->
+<g id="edge6" class="edge">
+<title>Guest-&gt;contactInfo</title>
+<path fill="none" stroke="black" d="M240.9,-215.7C247.29,-207.27 255.08,-196.97 262.08,-187.73"></path>
+<polygon fill="black" stroke="black" points="264.97,-189.71 268.22,-179.62 259.39,-185.48 264.97,-189.71"></polygon>
+</g>
+<!-- Books -->
+<g id="node13" class="node">
+<title>Books</title>
+<polygon fill="orange" stroke="black" points="404.8,-180 354.27,-162 404.8,-144 455.34,-162 404.8,-180"></polygon>
+<text text-anchor="middle" x="404.8" y="-157.8" font-family="Times,serif" font-size="14.00">Books</text>
+</g>
+<!-- Guest&#45;&gt;Books -->
+<g id="edge10" class="edge">
+<title>Guest-&gt;Books</title>
+<path fill="none" stroke="black" d="M255.07,-222.22C286.75,-209.68 338.98,-189.03 372.62,-175.73"></path>
+<polygon fill="black" stroke="black" points="373.99,-178.95 382.01,-172.01 371.42,-172.44 373.99,-178.95"></polygon>
+</g>
+<!-- Booking -->
+<g id="node3" class="node">
+<title>Booking</title>
+<polygon fill="lightgreen" stroke="black" points="591.03,-108 526.57,-108 526.57,-72 591.03,-72 591.03,-108"></polygon>
+<text text-anchor="middle" x="558.8" y="-85.8" font-family="Times,serif" font-size="14.00">Booking</text>
+</g>
+<!-- bookingID -->
+<g id="node10" class="node">
+<title>bookingID</title>
+<ellipse fill="lightyellow" stroke="black" cx="482.8" cy="-18" rx="74.14" ry="18"></ellipse>
+<text text-anchor="middle" x="482.8" y="-13.8" font-family="Times,serif" font-size="14.00">bookingID (PK)</text>
+</g>
+<!-- Booking&#45;&gt;bookingID -->
+<g id="edge7" class="edge">
+<title>Booking-&gt;bookingID</title>
+<path fill="none" stroke="black" d="M540.01,-71.7C530.49,-62.92 518.77,-52.13 508.43,-42.61"></path>
+<polygon fill="black" stroke="black" points="510.57,-39.82 500.85,-35.62 505.83,-44.97 510.57,-39.82"></polygon>
+</g>
+<!-- checkInDate -->
+<g id="node11" class="node">
+<title>checkInDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="634.8" cy="-18" rx="59.65" ry="18"></ellipse>
+<text text-anchor="middle" x="634.8" y="-13.8" font-family="Times,serif" font-size="14.00">checkInDate</text>
+</g>
+<!-- Booking&#45;&gt;checkInDate -->
+<g id="edge8" class="edge">
+<title>Booking-&gt;checkInDate</title>
+<path fill="none" stroke="black" d="M577.59,-71.7C587.19,-62.86 599,-51.97 609.4,-42.4"></path>
+<polygon fill="black" stroke="black" points="612.03,-44.73 617.01,-35.38 607.29,-39.58 612.03,-44.73"></polygon>
+</g>
+<!-- checkOutDate -->
+<g id="node12" class="node">
+<title>checkOutDate</title>
+<ellipse fill="lightyellow" stroke="black" cx="778.8" cy="-18" rx="66.03" ry="18"></ellipse>
+<text text-anchor="middle" x="778.8" y="-13.8" font-family="Times,serif" font-size="14.00">checkOutDate</text>
+</g>
+<!-- Booking&#45;&gt;checkOutDate -->
+<g id="edge9" class="edge">
+<title>Booking-&gt;checkOutDate</title>
+<path fill="none" stroke="black" d="M591.26,-78.67C627.23,-67.23 685.68,-48.63 727.78,-35.23"></path>
+<polygon fill="black" stroke="black" points="729.1,-38.49 737.57,-32.12 726.98,-31.82 729.1,-38.49"></polygon>
+</g>
+<!-- Books&#45;&gt;Room -->
+<g id="edge11" class="edge">
+<title>Books-&gt;Room</title>
+<path fill="none" stroke="black" d="M391.04,-148.49C380.79,-139.17 366.49,-126.17 354.08,-114.89"></path>
+<polygon fill="black" stroke="black" points="356.41,-112.28 346.65,-108.14 351.7,-117.46 356.41,-112.28"></polygon>
+</g>
+<!-- Books&#45;&gt;Booking -->
+<g id="edge12" class="edge">
+<title>Books-&gt;Booking</title>
+<path fill="none" stroke="black" d="M425.89,-151.41C449.31,-140.77 487.69,-123.33 517.2,-109.91"></path>
+<polygon fill="black" stroke="black" points="518.78,-113.03 526.44,-105.71 515.89,-106.66 518.78,-113.03"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This ER diagram shows a hotel booking system, where guests book rooms. Each booking records details such as booking ID and check-in/check-out dates.</p>
+</section>
+<section id="crows-foot-notation-mermaid-2" class="level2">
+<h2 class="anchored" data-anchor-id="crows-foot-notation-mermaid-2">Crow’s Foot Notation (Mermaid)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">erDiagram
+    ROOM {
+        int roomNumber PK
+        string type
+        float rate
+    }
+    GUEST {
+        int guestID PK
+        string name
+        string contactInfo
+    }
+    BOOKING {
+        int bookingID PK
+        date checkInDate
+        date checkOutDate
+        int roomNumber FK
+        int guestID FK
+    }
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="relation-set-schema-1" class="level3">
+<h3 class="anchored" data-anchor-id="relation-set-schema-1">Relation Set Schema</h3>
+<ul>
+<li><em>Room</em> (RoomNumber PK, Type, Rate)</li>
+<li><em>Guest</em> (GuestID PK, Name, ContactInfo)</li>
+<li><em>Booking</em> (BookingID PK, CheckInDate, CheckOutDate, GuestID FK, RoomNumber FK)</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="design-considerations" class="level1">
+<h1>Design Considerations</h1>
+<section id="weak-entities" class="level2">
+<h2 class="anchored" data-anchor-id="weak-entities">Weak Entities</h2>
+<ul>
+<li><em>Library Management System</em>: The Loan entity is dependent on both the Book and Member entities, making it a weak entity.</li>
+<li><em>Hotel Booking System</em>: The Booking entity depends on both the Room and Guest entities, making it a weak entity.</li>
+<li><em>Sports Tournament Management System</em>: The Match entity is a weak entity, dependent on Teams for its existence.</li>
+</ul>
+</section>
+<section id="composite-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="composite-attributes">Composite Attributes</h2>
+<ul>
+<li><em>Library Management System</em>: Avoided composite attributes for simplicity and to maintain relational integrity.</li>
+<li><em>Hotel Booking System</em>: Used simple attributes for better clarity and normalization.</li>
+<li><em>Sports Tournament Management System</em>: Separate attributes were used instead of composite ones to avoid redundancy.</li>
+</ul>
+</section>
+<section id="multivalued-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="multivalued-attributes">Multivalued Attributes</h2>
+<ul>
+<li><em>Library Management System</em>: The many-to-many relationship between Books and Members is modeled through the Loan entity rather than a multivalued attribute.</li>
+<li><em>Hotel Booking System</em>: Clear relationships between Guests and Bookings were modeled instead of multivalued attributes.</li>
+<li><em>Sports Tournament Management System</em>: Team Members were handled through a separate relation instead of a multivalued attribute.</li>
+</ul>
+</section>
+<section id="cardinality-and-participation" class="level2">
+<h2 class="anchored" data-anchor-id="cardinality-and-participation">Cardinality and Participation</h2>
+<ul>
+<li><em>Library Management System</em>: One Member can borrow many Books, and each Loan is linked to a specific Book and Member.</li>
+<li><em>Hotel Booking System</em>: A Guest can make multiple Bookings, and a Room can have multiple Bookings, but each Booking is linked to one Guest and one Room.</li>
+<li><em>Sports Tournament Management System</em>: Matches involve two Teams in a Many-to-Many relationship, while Referees officiate Matches in a One-to-Many relationship.</li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
